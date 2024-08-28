@@ -161,6 +161,7 @@ button:hover {
     justify-content: space-between;
     padding: 2rem;
     width: 50%;
+    padding: 2rem;
   }
   #main-title {
     margin-top: 1.25rem;
