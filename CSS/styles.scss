@@ -69,6 +69,7 @@ p {
 }
 
 .head {
+    font-family: $fraunces-font;
     font-size: 2rem;
     line-height: 2rem;
 }
@@ -159,7 +160,24 @@ button:hover {
     }
 
     #text-container {
+        @include apply-flexbox(column, space-between, space-between);
         padding: 2rem;
         width: 50%;
+    }
+
+    #main-title {
+        margin-top: 1.25rem;
+    }
+    
+    #main-description {
+        margin-top: 1.5rem;
+    }
+
+    #text-price {
+        margin-top: 1.81rem;
+    }
+
+    button {
+        margin-top: 1.87rem;
     }
 }
