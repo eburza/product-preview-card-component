@@ -1,0 +1,35 @@
+/* variables */
+$page-color: hsl(30, 38%, 92%);
+$component-color: hsl(0, 0%, 100%);
+$text-heading-color: hsl(212, 21%, 14%);
+$text-paragraph-color: hsl(228, 12%, 48%);
+$aquamarine-color: hsl(158, 36%, 37%);
+$montserrat-font: "Montserrat", sans-serif;
+$fraunces-font: "Fraunces", serif;
+$font-bold: 700;
+$font-light: 500;
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: $page-color;
+    font-family: $font-family;
+    height: 100%;
+    color: $text-color;
+}
+
+#site-wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#component {
+    background: $component-color;
+}
