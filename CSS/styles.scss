@@ -9,7 +9,7 @@ $montserrat-font: "Montserrat", sans-serif;
 $fraunces-font: "Fraunces", serif;
 $font-bold: 700;
 $font-light: 500;
-$layout-breakpoint-small: 24rem;
+$layout-breakpoint-small: 46.875rem;
 
 @mixin apply-flexbox($direction, $align, $justyfy) {
     display: flex;
