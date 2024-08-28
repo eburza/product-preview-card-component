@@ -1,35 +1,141 @@
-/* variables */
+/* functions */
 $page-color: hsl(30, 38%, 92%);
-$component-color: hsl(0, 0%, 100%);
-$text-heading-color: hsl(212, 21%, 14%);
-$text-paragraph-color: hsl(228, 12%, 48%);
+$white-color: hsl(0, 0%, 100%);
+$text-dark-color: hsl(212, 21%, 14%);
+$text-light-color: hsl(228, 12%, 48%);
 $aquamarine-color: hsl(158, 36%, 37%);
+$deep-aquamarine: hsl(157, 43%, 18%, 1);
 $montserrat-font: "Montserrat", sans-serif;
 $fraunces-font: "Fraunces", serif;
 $font-bold: 700;
 $font-light: 500;
 
+
+
+@mixin apply-flexbox($direction, $align, $justyfy) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: $align;
+    justify-content: $justyfy;
+  }
+
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 html, body {
-    margin: 0;
-    padding: 0;
     background-color: $page-color;
-    font-family: $font-family;
-    height: 100%;
-    color: $text-color;
+    font-family: $montserrat-font;
 }
 
+
 #site-wrapper {
+    @include apply-flexbox(column, center, center);
     width: 100vw;
     height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 #component {
-    background: $component-color;
+    @include apply-flexbox(column, center, initial);
+    background: $white-color;
+    width: 21.4375rem;
+    border-radius: 0.625rem;
+}
+
+/* text and button colors */
+.light {
+    color: $text-light-color;
+}
+
+.dark {
+    color: $text-dark-color;
+}
+
+#price-main {
+    color: $aquamarine-color;
+}
+
+/* text font details */
+
+.bold {
+    font-weight: $font-bold;
+}
+
+p {
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.4375rem;
+}
+
+.head {
+    font-size: 2rem;
+    line-height: 2rem;
+}
+
+#main-tag {
+    text-transform: uppercase;
+    letter-spacing: 0.3125rem;
+}
+
+#price-small {
+    text-decoration: line-through;
+}
+
+/* img container details */
+#img-container {
+    width: 21.4375rem;
+    height: 15rem;
+}
+
+#img-container > img {
+    width: 100%;
+    border-radius: 0.625rem 0.625rem 0rem 0rem;
+}
+
+/* containter with text and cta */
+#text-container {
+    @include apply-flexbox(column, center, space-between);
+    padding: 2rem 1.5rem 1.5rem;
+}
+
+.text-subcontainer {
+    @include apply-flexbox(column, start, space-between);
+    width: 100%;
+}
+
+/* main text */
+#main-title {
+    margin-top: 0.75rem;
+}
+
+#main-description {
+    margin-top: 1rem;
+}
+
+/* price */
+#text-price {
+    @include apply-flexbox(initial, center, initial);
+    gap: 1.19rem;
+    margin-top: 1.5rem;
+}
+
+/* button */
+button {
+    @include apply-flexbox(row, center, center);
+    margin-top: 1.25rem;
+    gap: 0.73rem;
+    width: 100%;
+    color: $white-color;
+    background: $aquamarine-color;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    font-family: inherit;
+    font-weight: $font-bold;
+}
+
+button:hover {
+    background: $deep-aquamarine;
 }

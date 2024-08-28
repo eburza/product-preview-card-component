@@ -1,17 +1,139 @@
-/* Error: Undefined variable.
- *    ,
- * 20 |     font-family: $font-family;
- *    |                  ^^^^^^^^^^^^
- *    '
- *   css/styles.scss 20:18  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined variable.\a    \2577 \a 20 \2502      font-family: $font-family;\a    \2502                   ^^^^^^^^^^^^\a    \2575 \a   css/styles.scss 20:18  root stylesheet";
+/* functions */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
+
+html, body {
+  background-color: hsl(30, 38%, 92%);
+  font-family: "Montserrat", sans-serif;
+}
+
+#site-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+#component {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: initial;
+  background: hsl(0, 0%, 100%);
+  width: 21.4375rem;
+  border-radius: 0.625rem;
+}
+
+/* text and button colors */
+.light {
+  color: hsl(228, 12%, 48%);
+}
+
+.dark {
+  color: hsl(212, 21%, 14%);
+}
+
+#price-main {
+  color: hsl(158, 36%, 37%);
+}
+
+/* text font details */
+.bold {
+  font-weight: 700;
+}
+
+p {
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.4375rem;
+}
+
+.head {
+  font-size: 2rem;
+  line-height: 2rem;
+}
+
+#main-tag {
+  text-transform: uppercase;
+  letter-spacing: 0.3125rem;
+}
+
+#price-small {
+  text-decoration: line-through;
+}
+
+/* img container details */
+#img-container {
+  width: 21.4375rem;
+  height: 15rem;
+}
+
+#img-container > img {
+  width: 100%;
+  border-radius: 0.625rem 0.625rem 0rem 0rem;
+}
+
+/* containter with text and cta */
+#text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 1.5rem 1.5rem;
+}
+
+.text-subcontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* main text */
+#main-title {
+  margin-top: 0.75rem;
+}
+
+#main-description {
+  margin-top: 1rem;
+}
+
+/* price */
+#text-price {
+  display: flex;
+  flex-direction: initial;
+  align-items: center;
+  justify-content: initial;
+  gap: 1.19rem;
+  margin-top: 1.5rem;
+}
+
+/* button */
+button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.25rem;
+  gap: 0.73rem;
+  width: 100%;
+  color: hsl(0, 0%, 100%);
+  background: hsl(158, 36%, 37%);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  font-family: inherit;
+  font-weight: 700;
+}
+
+button:hover {
+  background: hsl(157, 43%, 18%);
+}
+
+/*# sourceMappingURL=styles.css.map */
