@@ -154,6 +154,7 @@ button:hover {
     border-radius: 0.625rem 0rem 0rem 0.625rem;
   }
   #text-container {
+    padding: 2rem;
     width: 50%;
   }
 }
